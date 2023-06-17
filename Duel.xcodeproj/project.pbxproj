@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13298AA228FFFA65001A7545 /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13298AA128FFFA65001A7545 /* DuelView.swift */; };
+		132D1A14293F17C200C3B70A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A13293F17C200C3B70A /* Model.swift */; };
+		132D1A18293F1C1700C3B70A /* DrawClassifier1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */; };
+		1389D38B28E57777000AE98B /* Duel Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1389D38A28E57777000AE98B /* Duel Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1389D39028E57777000AE98B /* DuelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D38F28E57777000AE98B /* DuelApp.swift */; };
+		1389D39228E57777000AE98B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D39128E57777000AE98B /* InitialView.swift */; };
+		1389D39428E5777A000AE98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1389D39328E5777A000AE98B /* Assets.xcassets */; };
+		1389D39728E5777A000AE98B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1389D39628E5777A000AE98B /* Preview Assets.xcassets */; };
+		1389D3A128E5777A000AE98B /* Duel_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D3A028E5777A000AE98B /* Duel_Watch_AppTests.swift */; };
+		1389D3AB28E5777A000AE98B /* Duel_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D3AA28E5777A000AE98B /* Duel_Watch_AppUITests.swift */; };
+		1389D3AD28E5777A000AE98B /* Duel_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D3AC28E5777A000AE98B /* Duel_Watch_AppUITestsLaunchTests.swift */; };
+		13B0874628F562B6007ACDB2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B0874528F562B6007ACDB2 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1389D38C28E57777000AE98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1389D37E28E57776000AE98B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1389D38928E57777000AE98B;
+			remoteInfo = "Duel Watch App";
+		};
+		1389D39D28E5777A000AE98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1389D37E28E57776000AE98B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1389D38928E57777000AE98B;
+			remoteInfo = "Duel Watch App";
+		};
+		1389D3A728E5777A000AE98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1389D37E28E57776000AE98B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1389D38928E57777000AE98B;
+			remoteInfo = "Duel Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1389D3B328E5777A000AE98B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1389D38B28E57777000AE98B /* Duel Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		13298AA128FFFA65001A7545 /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
+		132D1A13293F17C200C3B70A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DrawClassifier1.mlmodel; path = "Draw Model/DrawClassifier1.mlmodel"; sourceTree = SOURCE_ROOT; };
+		1389D38428E57777000AE98B /* Duel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1389D38A28E57777000AE98B /* Duel Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duel Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1389D38F28E57777000AE98B /* DuelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelApp.swift; sourceTree = "<group>"; };
+		1389D39128E57777000AE98B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		1389D39328E5777A000AE98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1389D39628E5777A000AE98B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1389D39C28E5777A000AE98B /* Duel Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duel Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1389D3A028E5777A000AE98B /* Duel_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duel_Watch_AppTests.swift; sourceTree = "<group>"; };
+		1389D3A628E5777A000AE98B /* Duel Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duel Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1389D3AA28E5777A000AE98B /* Duel_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duel_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		1389D3AC28E5777A000AE98B /* Duel_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duel_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13B0874528F562B6007ACDB2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1389D38728E57777000AE98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D39928E5777A000AE98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D3A328E5777A000AE98B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1389D37D28E57776000AE98B = {
+			isa = PBXGroup;
+			children = (
+				1389D38E28E57777000AE98B /* Duel Watch App */,
+				1389D39F28E5777A000AE98B /* Duel Watch AppTests */,
+				1389D3A928E5777A000AE98B /* Duel Watch AppUITests */,
+				1389D38528E57777000AE98B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1389D38528E57777000AE98B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1389D38428E57777000AE98B /* Duel.app */,
+				1389D38A28E57777000AE98B /* Duel Watch App.app */,
+				1389D39C28E5777A000AE98B /* Duel Watch AppTests.xctest */,
+				1389D3A628E5777A000AE98B /* Duel Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1389D38E28E57777000AE98B /* Duel Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */,
+				1389D38F28E57777000AE98B /* DuelApp.swift */,
+				13B0874428F4D4B2007ACDB2 /* View */,
+				1389D39328E5777A000AE98B /* Assets.xcassets */,
+				1389D39528E5777A000AE98B /* Preview Content */,
+			);
+			path = "Duel Watch App";
+			sourceTree = "<group>";
+		};
+		1389D39528E5777A000AE98B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1389D39628E5777A000AE98B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1389D39F28E5777A000AE98B /* Duel Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				1389D3A028E5777A000AE98B /* Duel_Watch_AppTests.swift */,
+			);
+			path = "Duel Watch AppTests";
+			sourceTree = "<group>";
+		};
+		1389D3A928E5777A000AE98B /* Duel Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1389D3AA28E5777A000AE98B /* Duel_Watch_AppUITests.swift */,
+				1389D3AC28E5777A000AE98B /* Duel_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Duel Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		13B0874428F4D4B2007ACDB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1389D39128E57777000AE98B /* InitialView.swift */,
+				13298AA128FFFA65001A7545 /* DuelView.swift */,
+				132D1A13293F17C200C3B70A /* Model.swift */,
+				13B0874528F562B6007ACDB2 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1389D38328E57777000AE98B /* Duel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1389D3B428E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel" */;
+			buildPhases = (
+				1389D38228E57777000AE98B /* Resources */,
+				1389D3B328E5777A000AE98B /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1389D38D28E57777000AE98B /* PBXTargetDependency */,
+			);
+			name = Duel;
+			productName = Duel;
+			productReference = 1389D38428E57777000AE98B /* Duel.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		1389D38928E57777000AE98B /* Duel Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1389D3B028E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel Watch App" */;
+			buildPhases = (
+				1389D38628E57777000AE98B /* Sources */,
+				1389D38728E57777000AE98B /* Frameworks */,
+				1389D38828E57777000AE98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Duel Watch App";
+			productName = "Duel Watch App";
+			productReference = 1389D38A28E57777000AE98B /* Duel Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1389D39B28E5777A000AE98B /* Duel Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1389D3B728E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel Watch AppTests" */;
+			buildPhases = (
+				1389D39828E5777A000AE98B /* Sources */,
+				1389D39928E5777A000AE98B /* Frameworks */,
+				1389D39A28E5777A000AE98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1389D39E28E5777A000AE98B /* PBXTargetDependency */,
+			);
+			name = "Duel Watch AppTests";
+			productName = "Duel Watch AppTests";
+			productReference = 1389D39C28E5777A000AE98B /* Duel Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1389D3A528E5777A000AE98B /* Duel Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1389D3BA28E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel Watch AppUITests" */;
+			buildPhases = (
+				1389D3A228E5777A000AE98B /* Sources */,
+				1389D3A328E5777A000AE98B /* Frameworks */,
+				1389D3A428E5777A000AE98B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1389D3A828E5777A000AE98B /* PBXTargetDependency */,
+			);
+			name = "Duel Watch AppUITests";
+			productName = "Duel Watch AppUITests";
+			productReference = 1389D3A628E5777A000AE98B /* Duel Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1389D37E28E57776000AE98B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					1389D38328E57777000AE98B = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					1389D38928E57777000AE98B = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					1389D39B28E5777A000AE98B = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 1389D38928E57777000AE98B;
+					};
+					1389D3A528E5777A000AE98B = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 1389D38928E57777000AE98B;
+					};
+				};
+			};
+			buildConfigurationList = 1389D38128E57776000AE98B /* Build configuration list for PBXProject "Duel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1389D37D28E57776000AE98B;
+			productRefGroup = 1389D38528E57777000AE98B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1389D38328E57777000AE98B /* Duel */,
+				1389D38928E57777000AE98B /* Duel Watch App */,
+				1389D39B28E5777A000AE98B /* Duel Watch AppTests */,
+				1389D3A528E5777A000AE98B /* Duel Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1389D38228E57777000AE98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D38828E57777000AE98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1389D39728E5777A000AE98B /* Preview Assets.xcassets in Resources */,
+				1389D39428E5777A000AE98B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D39A28E5777A000AE98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D3A428E5777A000AE98B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1389D38628E57777000AE98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				132D1A14293F17C200C3B70A /* Model.swift in Sources */,
+				13B0874628F562B6007ACDB2 /* SettingsView.swift in Sources */,
+				1389D39228E57777000AE98B /* InitialView.swift in Sources */,
+				1389D39028E57777000AE98B /* DuelApp.swift in Sources */,
+				132D1A18293F1C1700C3B70A /* DrawClassifier1.mlmodel in Sources */,
+				13298AA228FFFA65001A7545 /* DuelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D39828E5777A000AE98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1389D3A128E5777A000AE98B /* Duel_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1389D3A228E5777A000AE98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1389D3AD28E5777A000AE98B /* Duel_Watch_AppUITestsLaunchTests.swift in Sources */,
+				1389D3AB28E5777A000AE98B /* Duel_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1389D38D28E57777000AE98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1389D38928E57777000AE98B /* Duel Watch App */;
+			targetProxy = 1389D38C28E57777000AE98B /* PBXContainerItemProxy */;
+		};
+		1389D39E28E5777A000AE98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1389D38928E57777000AE98B /* Duel Watch App */;
+			targetProxy = 1389D39D28E5777A000AE98B /* PBXContainerItemProxy */;
+		};
+		1389D3A828E5777A000AE98B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1389D38928E57777000AE98B /* Duel Watch App */;
+			targetProxy = 1389D3A728E5777A000AE98B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1389D3AE28E5777A000AE98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1389D3AF28E5777A000AE98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1389D3B128E5777A000AE98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Duel Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Duel;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Duel uses the local network to connect you to your opponent.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JacobKerames.Duel.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		1389D3B228E5777A000AE98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Duel Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Duel;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Duel uses the local network to connect you to your opponent.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JacobKerames.Duel.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		1389D3B528E5777A000AE98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				INFOPLIST_KEY_CFBundleDisplayName = Duel;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JacobKerames.Duel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1389D3B628E5777A000AE98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				INFOPLIST_KEY_CFBundleDisplayName = Duel;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JacobKerames.Duel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1389D3B828E5777A000AE98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JacobKerames.Duel-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duel Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Duel Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		1389D3B928E5777A000AE98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JacobKerames.Duel-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Duel Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Duel Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		1389D3BB28E5777A000AE98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JacobKerames.Duel-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Duel Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		1389D3BC28E5777A000AE98B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WD8HU66VZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JacobKerames.Duel-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Duel Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1389D38128E57776000AE98B /* Build configuration list for PBXProject "Duel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1389D3AE28E5777A000AE98B /* Debug */,
+				1389D3AF28E5777A000AE98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1389D3B028E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1389D3B128E5777A000AE98B /* Debug */,
+				1389D3B228E5777A000AE98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1389D3B428E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1389D3B528E5777A000AE98B /* Debug */,
+				1389D3B628E5777A000AE98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1389D3B728E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1389D3B828E5777A000AE98B /* Debug */,
+				1389D3B928E5777A000AE98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1389D3BA28E5777A000AE98B /* Build configuration list for PBXNativeTarget "Duel Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1389D3BB28E5777A000AE98B /* Debug */,
+				1389D3BC28E5777A000AE98B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1389D37E28E57776000AE98B /* Project object */;
+}

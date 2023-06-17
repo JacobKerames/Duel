@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "05ABCB0C-E19A-4B76-BDB0-AAEF5E512E8D": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "DrawClassifier 1.mlmodel",
+            "path": "com.apple.CoreML/DrawClassifier 1.mlmodel"
+        },
+        "1F0373D3-A8C7-401A-8E56-20A7664451E7": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "49789100-6A6F-4EB5-A7B1-80180F1F5E2A": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        }
+    },
+    "rootModelIdentifier": "05ABCB0C-E19A-4B76-BDB0-AAEF5E512E8D"
+}
