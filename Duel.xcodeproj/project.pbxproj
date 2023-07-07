@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13298AA228FFFA65001A7545 /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13298AA128FFFA65001A7545 /* DuelView.swift */; };
-		132D1A14293F17C200C3B70A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A13293F17C200C3B70A /* Model.swift */; };
+		132D1A14293F17C200C3B70A /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A13293F17C200C3B70A /* ModelHandler.swift */; };
 		132D1A18293F1C1700C3B70A /* DrawClassifier1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */; };
 		1389D38B28E57777000AE98B /* Duel Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1389D38A28E57777000AE98B /* Duel Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1389D39028E57777000AE98B /* DuelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D38F28E57777000AE98B /* DuelApp.swift */; };
@@ -61,7 +61,7 @@
 
 /* Begin PBXFileReference section */
 		13298AA128FFFA65001A7545 /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
-		132D1A13293F17C200C3B70A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		132D1A13293F17C200C3B70A /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
 		132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DrawClassifier1.mlmodel; path = "Draw Model/DrawClassifier1.mlmodel"; sourceTree = SOURCE_ROOT; };
 		1389D38428E57777000AE98B /* Duel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1389D38A28E57777000AE98B /* Duel Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duel Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +165,7 @@
 			children = (
 				1389D39128E57777000AE98B /* InitialView.swift */,
 				13298AA128FFFA65001A7545 /* DuelView.swift */,
-				132D1A13293F17C200C3B70A /* Model.swift */,
+				132D1A13293F17C200C3B70A /* ModelHandler.swift */,
 				13B0874528F562B6007ACDB2 /* SettingsView.swift */,
 			);
 			path = View;
@@ -329,7 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				132D1A14293F17C200C3B70A /* Model.swift in Sources */,
+				132D1A14293F17C200C3B70A /* ModelHandler.swift in Sources */,
 				13B0874628F562B6007ACDB2 /* SettingsView.swift in Sources */,
 				1389D39228E57777000AE98B /* InitialView.swift in Sources */,
 				1389D39028E57777000AE98B /* DuelApp.swift in Sources */,
