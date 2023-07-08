@@ -7,23 +7,37 @@
 
 import WatchKit
 import WatchConnectivity
+import Combine
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
-    let wcController = WatchConnectivityController()
-    
-    func applicationDidFinishLaunching() {
+// The main class in the WatchKit extension that acts as a delegate for app-level behaviors, like life cycle.
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, ObservableObject {
+    // Create a shared instance of the ExtensionDelegate which can be accessed from anywhere in the code
+    static let shared = ExtensionDelegate()
+
+    private override init() {
+        super.init()
+        // Check if the current device supports watch connectivity
         if WCSession.isSupported() {
-            let session = WCSession.default
+            let session  = WCSession.default // Get the default session and set its delegate
             session.delegate = self
-            session.activate()
+            session.activate() // Activate the session to start communicating with the paired iPhone
         }
     }
     
+    // Activation of the session has completed
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        // handle session activation
+        // Handle activation completion here
     }
-    
+
+    // Send a message from the iPhone app to the Watch app
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        // handle incoming messages from iOS app
+        // Handle receiving message
+    }
+
+    // Send a message from the Watch app to the iPhone app
+    func sendMessage(_ message: [String: Any]) {
+        if WCSession.default.isReachable { // confirm connectivity
+            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
     }
 }

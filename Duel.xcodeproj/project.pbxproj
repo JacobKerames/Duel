@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13298AA228FFFA65001A7545 /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13298AA128FFFA65001A7545 /* DuelView.swift */; };
-		132D1A14293F17C200C3B70A /* ModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A13293F17C200C3B70A /* ModelHandler.swift */; };
 		132D1A18293F1C1700C3B70A /* DrawClassifier1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */; };
 		1389D38B28E57777000AE98B /* Duel Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1389D38A28E57777000AE98B /* Duel Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1389D39028E57777000AE98B /* DuelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D38F28E57777000AE98B /* DuelApp.swift */; };
@@ -29,7 +28,7 @@
 		139A61C22A59E16700AE01B6 /* MultipeerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A61C12A59E16700AE01B6 /* MultipeerController.swift */; };
 		139A61C52A59E48900AE01B6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A61C42A59E48900AE01B6 /* ExtensionDelegate.swift */; };
 		139A61C72A59E4A600AE01B6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A61C62A59E4A600AE01B6 /* InterfaceController.swift */; };
-		139A61C92A59E4C700AE01B6 /* WatchConnectivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A61C82A59E4C700AE01B6 /* WatchConnectivityController.swift */; };
+		139A61CB2A59EE2200AE01B6 /* WatchConnectivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A61C82A59E4C700AE01B6 /* WatchConnectivityController.swift */; };
 		13B0874628F562B6007ACDB2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B0874528F562B6007ACDB2 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +86,6 @@
 
 /* Begin PBXFileReference section */
 		13298AA128FFFA65001A7545 /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
-		132D1A13293F17C200C3B70A /* ModelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHandler.swift; sourceTree = "<group>"; };
 		132D1A17293F1C1700C3B70A /* DrawClassifier1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DrawClassifier1.mlmodel; path = "Draw Model/DrawClassifier1.mlmodel"; sourceTree = SOURCE_ROOT; };
 		1389D38428E57777000AE98B /* Duel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1389D38A28E57777000AE98B /* Duel Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duel Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,7 +269,6 @@
 			children = (
 				139A61C42A59E48900AE01B6 /* ExtensionDelegate.swift */,
 				139A61C62A59E4A600AE01B6 /* InterfaceController.swift */,
-				139A61C82A59E4C700AE01B6 /* WatchConnectivityController.swift */,
 			);
 			path = Connectivity;
 			sourceTree = "<group>";
@@ -279,6 +276,7 @@
 		139A61CA2A59E4CE00AE01B6 /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
+				139A61C82A59E4C700AE01B6 /* WatchConnectivityController.swift */,
 				139A61BF2A59E13F00AE01B6 /* AppDelegate.swift */,
 				139A61C12A59E16700AE01B6 /* MultipeerController.swift */,
 			);
@@ -290,7 +288,6 @@
 			children = (
 				1389D39128E57777000AE98B /* InitialView.swift */,
 				13298AA128FFFA65001A7545 /* DuelView.swift */,
-				132D1A13293F17C200C3B70A /* ModelHandler.swift */,
 				13B0874528F562B6007ACDB2 /* SettingsView.swift */,
 			);
 			path = View;
@@ -544,9 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				132D1A14293F17C200C3B70A /* ModelHandler.swift in Sources */,
 				139A61C72A59E4A600AE01B6 /* InterfaceController.swift in Sources */,
-				139A61C92A59E4C700AE01B6 /* WatchConnectivityController.swift in Sources */,
 				139A61C52A59E48900AE01B6 /* ExtensionDelegate.swift in Sources */,
 				13B0874628F562B6007ACDB2 /* SettingsView.swift in Sources */,
 				1389D39228E57777000AE98B /* InitialView.swift in Sources */,
@@ -581,6 +576,7 @@
 				139A619A2A59DFF000AE01B6 /* ContentView.swift in Sources */,
 				139A61982A59DFF000AE01B6 /* Duel_iOS_AppApp.swift in Sources */,
 				139A61C22A59E16700AE01B6 /* MultipeerController.swift in Sources */,
+				139A61CB2A59EE2200AE01B6 /* WatchConnectivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,11 +678,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -734,10 +732,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

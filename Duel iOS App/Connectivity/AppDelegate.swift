@@ -6,38 +6,35 @@
 //
 
 import UIKit
-import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    let wcController = WatchConnectivityController()
-    let mpController = MultipeerController()
-    
+    let multipeerController = MultipeerController()
+    let wcController = WatchConnectivityController.shared
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if WCSession.isSupported() {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
+        // Override point for customization after application launch.
+        
+        multipeerController.startHosting()
+        
+        // Listen for updates from WatchConnectivityController and forward them to MultipeerController
+        wcController.didReceiveMessage = { [weak self] message in
+            if let action = message["action"] as? String {
+                switch action {
+                case "start":
+                    self?.multipeerController.startHosting()
+                case "connect":
+                    self?.multipeerController.startJoining()
+                default:
+                    break
+                }
+            }
         }
+        
         return true
     }
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        // handle session activation
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        if let action = message["action"] as? String {
-            switch action {
-            case "start":
-                mpController.startHosting()
-            case "connect":
-                mpController.joinSession()
-            default:
-                break
-            }
-        }
-    }
+    // ...
 }

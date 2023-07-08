@@ -4,20 +4,30 @@
 //
 //  Created by Jacob Kerames on 9/29/22.
 //
+
 import SwiftUI
-import MultipeerConnectivity
+import WatchConnectivity
 
 struct InitialView: View {
-    @StateObject private var multipeer = Multipeer()
-
+    @StateObject private var wcDelegate = ExtensionDelegate.shared
+    
     var body: some View {
         VStack {
             Button(action: {
-                self.multipeer.startHosting()
+                wcDelegate.sendMessage(["action": "start"])
             }) {
                 HStack {
                     Image(systemName: "hand.point.right.fill")
                     Text("Begin a Duel")
+                }
+            }
+            
+            Button(action: {
+                wcDelegate.sendMessage(["action": "connect"])
+            }) {
+                HStack {
+                    Image(systemName: "arrow.right.circle.fill")
+                    Text("Join a Duel")
                 }
             }
         }
