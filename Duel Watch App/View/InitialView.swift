@@ -4,32 +4,20 @@
 //
 //  Created by Jacob Kerames on 9/29/22.
 //
-
 import SwiftUI
+import MultipeerConnectivity
 
 struct InitialView: View {
+    @StateObject private var multipeer = Multipeer()
+
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Duel")
-                //List for scrolling
-                List {
-                    //Duel button
-                    NavigationLink(destination: DuelView(), label: {
-                        HStack {
-                            Image(systemName: "hand.point.right.fill")
-                            Text("Begin a Duel")
-                        }
-                        .padding()
-                    })
-                    //Settings button
-                    NavigationLink(destination: SettingsView(), label: {
-                        HStack {
-                            Image(systemName: "gear")
-                            Text("Settings")
-                        }
-                        .padding()
-                    })
+        VStack {
+            Button(action: {
+                self.multipeer.startHosting()
+            }) {
+                HStack {
+                    Image(systemName: "hand.point.right.fill")
+                    Text("Begin a Duel")
                 }
             }
         }
