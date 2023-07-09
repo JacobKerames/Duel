@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Duel_Watch_AppApp: App {
+struct DuelWatchApp: App {
     var body: some Scene {
         WindowGroup {
             InitialView()

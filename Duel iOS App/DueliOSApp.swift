@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Duel_iOS_AppApp: App {
+struct DueliOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
