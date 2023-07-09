@@ -22,7 +22,10 @@ class DuelView: ObservableObject {
     let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let wcDelegate = ExtensionDelegate.shared
     private let motionManager = MotionManager()
+    
     private var audioPlayer: AVAudioPlayer?
+    private var drawAudioPlayer: AVAudioPlayer?
+
     
     init() {
         _ = wcDelegate.$message.compactMap { $0 }
@@ -88,6 +91,8 @@ class DuelView: ObservableObject {
         } else if countdown == 0 && !didDrawEarly {
             let timestamp = Date().timeIntervalSince1970
             wcDelegate.sendMessage(["action": "draw", "timestamp": timestamp])
+            playDrawSound()
+            playHaptic()
         }
     }
     
@@ -99,6 +104,17 @@ class DuelView: ObservableObject {
             audioPlayer?.play()
         } catch {
             print("Couldn't load sound file")
+        }
+    }
+    
+    private func playDrawSound() {
+        guard let url = Bundle.main.url(forResource: "draw_action", withExtension: "wav") else { return }
+
+        do {
+            drawAudioPlayer = try AVAudioPlayer(contentsOf: url)
+            drawAudioPlayer?.play()
+        } catch {
+            print("Couldn't load draw sound file")
         }
     }
 
