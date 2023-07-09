@@ -81,7 +81,7 @@ struct InitialView: View {
 
                 let theirTimestamp = message["timestamp"] as? TimeInterval
                 let ourTimestamp = Date().timeIntervalSince1970
-                let averageTimestamp = ((theirTimestamp ?? <#default value#>) + ourTimestamp) / 2
+                let averageTimestamp = ((theirTimestamp ?? 0) + ourTimestamp) / 2
 
                 if theirTimestamp! < averageTimestamp {
                     // They drew first
