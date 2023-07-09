@@ -13,6 +13,8 @@ import Combine
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, ObservableObject {
     // Create a shared instance of the ExtensionDelegate which can be accessed from anywhere in the code
     static let shared = ExtensionDelegate()
+    
+    @Published var message: [String: Any]?
 
     private override init() {
         super.init()
