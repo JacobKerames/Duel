@@ -28,18 +28,28 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, Obser
     
     // Activation of the session has completed
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        // Handle activation completion here
+        // Log activation state and any error
+        print("WCSession activation completed. State: \(activationState.rawValue)")
+        if let error = error {
+            print("WCSession activation failed with error: \(error.localizedDescription)")
+        }
     }
 
-    // Send a message from the iPhone app to the Watch app
+    // Receive a message from the iPhone app
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        // Handle receiving message
+        // Update published `message` property with received message
+        DispatchQueue.main.async {
+            self.message = message
+        }
     }
 
     // Send a message from the Watch app to the iPhone app
     func sendMessage(_ message: [String: Any]) {
-        if WCSession.default.isReachable { // confirm connectivity
-            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        if WCSession.default.isReachable {
+            WCSession.default.sendMessage(message, replyHandler: nil) { error in
+                // Handle the error here
+                print("Failed to send message: \(error)")
+            }
         }
     }
 }
