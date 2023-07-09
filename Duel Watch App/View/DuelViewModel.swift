@@ -12,6 +12,7 @@ import AVFoundation
 import WatchKit
 
 class DuelViewModel: ObservableObject {
+    // Published properties for managing the duel state
     @Published var duelResult: String = ""
     @Published var countdown = 3
     @Published var isCountingDown = false
@@ -19,15 +20,20 @@ class DuelViewModel: ObservableObject {
     @Published var isDuelStarted = false
     @Published var isDrawDetected = false
 
+    // Timer for countdown
     let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    // WatchConnectivity delegate and motion manager
     private let wcDelegate = ExtensionDelegate.shared
     private let motionManager = MotionManager()
     
+    // Audio players for sound effects
     private var audioPlayer: AVAudioPlayer?
     private var drawAudioPlayer: AVAudioPlayer?
 
     
     init() {
+        // Observe the message updates from WatchConnectivity
         _ = wcDelegate.$message.compactMap { $0 }
             .sink(receiveValue: { message in
                 if let action = message["action"] as? String {
@@ -61,14 +67,17 @@ class DuelViewModel: ObservableObject {
             })
     }
     
+    // Start a duel by sending a "start" message
     func startDuel() {
         wcDelegate.sendMessage(["action": "start"])
     }
 
+    // Join a duel by sending a "connect" message
     func joinDuel() {
         wcDelegate.sendMessage(["action": "connect"])
     }
 
+    // Perform the countdown tick
     func countdownTick() {
         if countdown > 0 {
             countdown -= 1
@@ -84,6 +93,7 @@ class DuelViewModel: ObservableObject {
         }
     }
 
+    // Handle the draw motion detection
     func drawDetected() {
         if isCountingDown {
             didDrawEarly = true
@@ -96,6 +106,7 @@ class DuelViewModel: ObservableObject {
         }
     }
     
+    // Play a sound effect for counting down
     private func playSound(for event: String = "countdown") {
         guard let url = Bundle.main.url(forResource: event, withExtension: "wav") else { return }
 
@@ -107,6 +118,7 @@ class DuelViewModel: ObservableObject {
         }
     }
     
+    // Play a sound effect for draw action
     private func playDrawSound() {
         guard let url = Bundle.main.url(forResource: "draw_action", withExtension: "wav") else { return }
 
@@ -118,6 +130,7 @@ class DuelViewModel: ObservableObject {
         }
     }
 
+    // Play haptic feedback
     private func playHaptic() {
         WKInterfaceDevice.current().play(.click)
     }

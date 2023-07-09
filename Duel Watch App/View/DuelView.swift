@@ -1,5 +1,5 @@
 //
-//  InitialView.swift
+//  DuelView.swift
 //  Duel Watch App
 //
 //  Created by Jacob Kerames on 9/29/22.
@@ -42,11 +42,11 @@ struct DuelView: View {
             }
         }
         .onReceive(viewModel.countdownTimer) { _ in
-            viewModel.countdownTick()
+            viewModel.countdownTick() // Perform countdown tick action
         }
         .onChange(of: viewModel.isDrawDetected) { drawDetected in
             if drawDetected {
-                viewModel.drawDetected()
+                viewModel.drawDetected() // Perform action when draw is detected
             }
         }
     }
