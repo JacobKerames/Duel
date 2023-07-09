@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13298AA228FFFA65001A7545 /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13298AA128FFFA65001A7545 /* DuelView.swift */; };
+		13298AA228FFFA65001A7545 /* DuelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13298AA128FFFA65001A7545 /* DuelViewModel.swift */; };
 		1389D38B28E57777000AE98B /* Duel Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1389D38A28E57777000AE98B /* Duel Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1389D39028E57777000AE98B /* DuelWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D38F28E57777000AE98B /* DuelWatchApp.swift */; };
-		1389D39228E57777000AE98B /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D39128E57777000AE98B /* InitialView.swift */; };
+		1389D39228E57777000AE98B /* DuelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D39128E57777000AE98B /* DuelView.swift */; };
 		1389D39428E5777A000AE98B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1389D39328E5777A000AE98B /* Assets.xcassets */; };
 		1389D39728E5777A000AE98B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1389D39628E5777A000AE98B /* Preview Assets.xcassets */; };
 		1389D3A128E5777A000AE98B /* Duel_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1389D3A028E5777A000AE98B /* Duel_Watch_AppTests.swift */; };
@@ -87,11 +87,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		13298AA128FFFA65001A7545 /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
+		13298AA128FFFA65001A7545 /* DuelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelViewModel.swift; sourceTree = "<group>"; };
 		1389D38428E57777000AE98B /* Duel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1389D38A28E57777000AE98B /* Duel Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duel Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1389D38F28E57777000AE98B /* DuelWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelWatchApp.swift; sourceTree = "<group>"; };
-		1389D39128E57777000AE98B /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		1389D39128E57777000AE98B /* DuelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelView.swift; sourceTree = "<group>"; };
 		1389D39328E5777A000AE98B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1389D39628E5777A000AE98B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1389D39C28E5777A000AE98B /* Duel Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duel Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,8 +292,8 @@
 		13B0874428F4D4B2007ACDB2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1389D39128E57777000AE98B /* InitialView.swift */,
-				13298AA128FFFA65001A7545 /* DuelView.swift */,
+				1389D39128E57777000AE98B /* DuelView.swift */,
+				13298AA128FFFA65001A7545 /* DuelViewModel.swift */,
 				13B0874528F562B6007ACDB2 /* SettingsView.swift */,
 			);
 			path = View;
@@ -553,9 +553,9 @@
 				139A61CF2A5A2FC300AE01B6 /* DrawClassifier.mlmodel in Sources */,
 				139A61D12A5A371A00AE01B6 /* MotionManager.swift in Sources */,
 				139A61CD2A5A2F0D00AE01B6 /* DrawClassifier1.mlmodel in Sources */,
-				1389D39228E57777000AE98B /* InitialView.swift in Sources */,
+				1389D39228E57777000AE98B /* DuelView.swift in Sources */,
 				1389D39028E57777000AE98B /* DuelWatchApp.swift in Sources */,
-				13298AA228FFFA65001A7545 /* DuelView.swift in Sources */,
+				13298AA228FFFA65001A7545 /* DuelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

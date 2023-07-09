@@ -15,7 +15,7 @@ struct DuelWatchApp: App {
     var body: some Scene {
         WindowGroup {
             // Provide InitialView with the ExtensionDelegate
-            InitialView().environmentObject(wcDelegate)
+            DuelView().environmentObject(wcDelegate)
         }
     }
 }
