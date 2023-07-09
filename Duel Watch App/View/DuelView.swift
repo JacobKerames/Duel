@@ -8,6 +8,8 @@
 import Foundation
 import WatchConnectivity
 import Combine
+import AVFoundation
+import WatchKit
 
 class DuelView: ObservableObject {
     @Published var duelResult: String = ""
@@ -20,6 +22,7 @@ class DuelView: ObservableObject {
     let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     private let wcDelegate = ExtensionDelegate.shared
     private let motionManager = MotionManager()
+    private var audioPlayer: AVAudioPlayer?
     
     init() {
         _ = wcDelegate.$message.compactMap { $0 }
@@ -66,8 +69,15 @@ class DuelView: ObservableObject {
     func countdownTick() {
         if countdown > 0 {
             countdown -= 1
+            if countdown == 5 {
+                motionManager.startUpdates()
+            }
+            playSound()
+            playHaptic()
         } else {
             isCountingDown = false
+            playSound(for: "draw")
+            playHaptic()
         }
     }
 
@@ -79,5 +89,20 @@ class DuelView: ObservableObject {
             let timestamp = Date().timeIntervalSince1970
             wcDelegate.sendMessage(["action": "draw", "timestamp": timestamp])
         }
+    }
+    
+    private func playSound(for event: String = "countdown") {
+        guard let url = Bundle.main.url(forResource: event, withExtension: "wav") else { return }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Couldn't load sound file")
+        }
+    }
+
+    private func playHaptic() {
+        WKInterfaceDevice.current().play(.click)
     }
 }
