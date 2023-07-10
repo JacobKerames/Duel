@@ -5,8 +5,6 @@
 //  Created by Jacob Kerames on 10/19/22.
 //
 
-import Foundation
-import WatchConnectivity
 import Combine
 import AVFoundation
 import WatchKit
@@ -24,22 +22,20 @@ class DuelViewModel: ObservableObject {
     let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     // WatchConnectivity delegate and motion manager
-    private let wcDelegate = ExtensionDelegate.shared
+    private let wcService = WatchConnectivityService.shared
     private let motionManager = MotionManager()
     
     // Audio players for sound effects
     private var audioPlayer: AVAudioPlayer?
     private var drawAudioPlayer: AVAudioPlayer?
 
-    
+    private var cancellables = Set<AnyCancellable>()
+
     init() {
         // Observe the message updates from WatchConnectivity
-        _ = wcDelegate.$message.compactMap { $0 }
+        wcService.$message.compactMap { $0 }
             .sink(receiveValue: { message in
                 if let action = message["action"] as? String {
-                    let timestamp = Date().timeIntervalSince1970
-                    self.wcDelegate.sendMessage(["action": "draw", "timestamp": timestamp])
-
                     switch action {
                     case "countdownStart":
                         self.isDuelStarted = true
@@ -53,28 +49,19 @@ class DuelViewModel: ObservableObject {
                     default:
                         break
                     }
-
-                    let theirTimestamp = message["timestamp"] as? TimeInterval
-                    let ourTimestamp = Date().timeIntervalSince1970
-                    let averageTimestamp = ((theirTimestamp ?? 0) + ourTimestamp) / 2
-
-                    if theirTimestamp! < averageTimestamp {
-                        // They drew first
-                    } else {
-                        // We drew first
-                    }
                 }
             })
+            .store(in: &cancellables)
     }
     
     // Start a duel by sending a "start" message
     func startDuel() {
-        wcDelegate.sendMessage(["action": "start"])
+        wcService.sendMessage(["action": "start"])
     }
 
     // Join a duel by sending a "connect" message
     func joinDuel() {
-        wcDelegate.sendMessage(["action": "connect"])
+        wcService.sendMessage(["action": "connect"])
     }
 
     // Perform the countdown tick
@@ -97,10 +84,10 @@ class DuelViewModel: ObservableObject {
     func drawDetected() {
         if isCountingDown {
             didDrawEarly = true
-            wcDelegate.sendMessage(["action": "earlyDraw"])
+            wcService.sendMessage(["action": "earlyDraw"])
         } else if countdown == 0 && !didDrawEarly {
             let timestamp = Date().timeIntervalSince1970
-            wcDelegate.sendMessage(["action": "draw", "timestamp": timestamp])
+            wcService.sendMessage(["action": "draw", "timestamp": timestamp])
             playDrawSound()
             playHaptic()
         }

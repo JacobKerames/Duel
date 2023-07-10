@@ -1,54 +1,54 @@
-//
 //  ExtensionDelegate.swift
 //  Duel Watch App
 //
 //  Created by Jacob Kerames on 7/8/23.
 //
 
-import WatchKit
-import WatchConnectivity
+import SwiftUI
 import Combine
+import WatchKit
 
-// The main class in the WatchKit extension that acts as a delegate for app-level behaviors, like life cycle.
-class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate, ObservableObject {
-    // Create a shared instance of the ExtensionDelegate which can be accessed from anywhere in the code
+class ExtensionDelegate: NSObject, WKExtensionDelegate, ObservableObject {
     static let shared = ExtensionDelegate()
+    @Published var watchConnectivityService = WatchConnectivityService.shared
     
-    @Published var message: [String: Any]?
-
     private override init() {
         super.init()
-        // Check if the current device supports watch connectivity
-        if WCSession.isSupported() {
-            let session  = WCSession.default // Get the default session and set its delegate
-            session.delegate = self
-            session.activate() // Activate the session to start communicating with the paired iPhone
-        }
-    }
-    
-    // Activation of the session has completed
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        // Log activation state and any error
-        print("WCSession activation completed. State: \(activationState.rawValue)")
-        if let error = error {
-            print("WCSession activation failed with error: \(error.localizedDescription)")
-        }
     }
 
-    // Receive a message from the iPhone app
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        // Update published `message` property with received message
-        DispatchQueue.main.async {
-            self.message = message
-        }
+    func applicationDidFinishLaunching() {
+        // Perform any final initialization of your application.
     }
 
-    // Send a message from the Watch app to the iPhone app
-    func sendMessage(_ message: [String: Any]) {
-        if WCSession.default.isReachable {
-            WCSession.default.sendMessage(message, replyHandler: nil) { error in
-                // Handle the error here
-                print("Failed to send message: \(error)")
+    func applicationDidBecomeActive() {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillResignActive() {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, stop timers, etc.
+    }
+
+    func handle(_ backgroundTasks: Set<WKRefreshBackgroundTask>) {
+        // Sent when the system needs to launch the application in the background to process tasks. Tasks arrive in a set, so loop through and process each one.
+        for task in backgroundTasks {
+            // Use a switch statement to check the task type
+            switch task {
+            case let backgroundTask as WKApplicationRefreshBackgroundTask:
+                // Be sure to complete the background task once you’re done.
+                backgroundTask.setTaskCompletedWithSnapshot(false)
+            case let snapshotTask as WKSnapshotRefreshBackgroundTask:
+                // Snapshot tasks have a unique completion call, make sure to set your expiration date
+                snapshotTask.setTaskCompleted(restoredDefaultState: true, estimatedSnapshotExpiration: Date.distantFuture, userInfo: nil)
+            case let connectivityTask as WKWatchConnectivityRefreshBackgroundTask:
+                // Be sure to complete the connectivity task once you’re done.
+                connectivityTask.setTaskCompletedWithSnapshot(false)
+            case let urlSessionTask as WKURLSessionRefreshBackgroundTask:
+                // Be sure to complete the URL session task once you’re done.
+                urlSessionTask.setTaskCompletedWithSnapshot(false)
+            default:
+                // make sure to complete unhandled task types
+                task.setTaskCompletedWithSnapshot(false)
             }
         }
     }
